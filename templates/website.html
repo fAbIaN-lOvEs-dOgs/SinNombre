@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perro</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #c9d6ff, #e2e2e2);
+        }
+
+        header {
+            background: linear-gradient(135deg, #644, #144);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .button {
+            position: relative;
+            padding: 15px 40px;
+            font-size: 18px;
+            color: black;
+            background: rgba(255, 255, 255, 0.25);
+
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 14px;
+
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            overflow: hidden;
+
+            transition: all 0.3s ease;
+        }
+
+        .button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255, 255, 255, 0.6),
+                transparent
+            );
+            transform: skewX(-25deg);
+        }
+
+        .button:hover::before {
+            animation: shine 1s ease forwards;
+        }
+
+        .button:hover {
+            transform: scale(1.07);
+            box-shadow: 0 12px 45px rgba(255, 255, 255, 0.4);
+        }
+
+        .button:active {
+            transform: scale(0.96);
+        }
+
+        @keyframes shine {
+            to {
+                left: 150%;
+            }
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+
+            padding: 20px;
+            margin-bottom: 20px;
+
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Perro</h1>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>Schnauzer Miniatura</h2>
+            <p>Mi perro es un schnauzer miniatura.</p>
+            <button class="button">
+                <a href="/dog/Schnauzer miniatura">Más información</a>
+            </button>
+        </div>
+
+        <div class="section">
+            <h2>Mi Perro es Hermoso</h2>
+            <p>Mi perro es muy hermoso.</p>
+            <img src="../static/mi_perro.jpeg" alt="Mi Perro" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 15px; box-shadow: 0 4px 15px rgba(0.0, 0.0, 0.0, 0.1);">
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Mi Perro. Todos los derechos a mi perro.</p>
+    </footer>
+
+</body>
+</html>
